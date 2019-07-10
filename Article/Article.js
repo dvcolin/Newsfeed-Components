@@ -52,6 +52,11 @@ function createArticle(header, date, description) {
   articleDate.textContent = date;
   articleDescription.textContent = description;
 
+  //Events
+  articleButton.addEventListener('click', () => {
+    articleContent.classList.toggle('article-open');
+  })
+
   return articleContent;
 }
 

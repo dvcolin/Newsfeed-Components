@@ -12,6 +12,7 @@ function createMenu() {
     "Music",
     "Log Out"
   ];
+
   const menuList = document.createElement("ul");
 
   menuData.forEach(item => {
