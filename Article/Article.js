@@ -4,7 +4,7 @@ const articleData = [
   {
     header: `Lambda School Students: "We're the best!"`,
     date: `Nov 5th, 2017`,
-    description: `Article 1`,
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit non laboriosam quidem pariatur eum dolor adipisci rem quia ducimus incidunt? Ducimus exercitationem sequi reiciendis beatae amet dolores fuga voluptas deleniti cupiditate quos quod, itaque necessitatibus hic consequuntur doloremque earum facere quia neque voluptate dolor odio, ad sint ullam aperiam. Corrupti blanditiis, sint veritatis nisi harum tenetur. Vel aliquid minima ipsam ab, placeat dolor modi laborum nostrum veniam officia dignissimos vero? Exercitationem pariatur doloribus dolorem numquam accusantium? Nihil incidunt ullam quae accusantium non numquam blanditiis tenetur, facilis, voluptatibus eveniet corrupti fugiat consequuntur error suscipit hic. Maiores porro labore ratione inventore ea, dicta laborum reiciendis similique harum. Mollitia doloribus suscipit omnis ab repellendus libero accusantium autem, adipisci perspiciatis ad earum tempora optio illum vero, et deleniti repudiandae sunt iste ipsum expedita neque repellat! At deleniti facere aperiam modi vel, laudantium sit quam! Obcaecati magni esse animi, perspiciatis quisquam distinctio sequi odio quas labore placeat iusto ut asperiores explicabo aperiam commodi nostrum voluptatem, sunt doloremque quibusdam saepe debitis! Earum officia laudantium inventore temporibus, animi iure consequatur ullam fugiat velit optio soluta, vero quo quam consectetur blanditiis harum cum autem explicabo quod error et commodi rerum laborum! Quo fugit voluptatum eos iste minima. Id.`,
     index: 0,
   },
   {
@@ -61,13 +61,6 @@ function createArticle(header, date, description) {
   //Events
   articleButton.addEventListener('click', () => {
     articleContent.classList.toggle('article-open');
-  })
-
-  articleContent.addEventListener('mouseover', () => {
-    TweenMax.to('.article', 0.15, {
-      x: 5,
-      y: 3
-    })
   })
 
   return articleContent;
