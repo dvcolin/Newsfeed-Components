@@ -5,25 +5,31 @@ const articleData = [
     header: `Lambda School Students: "We're the best!"`,
     date: `Nov 5th, 2017`,
     description: `Article 1`,
+    index: 0,
   },
   {
     header: `Javascript and You, ES6`,
     date: `Nov 7th, 2017`,
     description: `Article 2`,
+    index: 1,
   },
   {
     header: `React vs Angular vs Vue`,
     date: `Nov 5th, 2017`,
     description: `Article 3`,
+    index: 2,
   },
   {
     header: `Professional Software Development in 2018`,
     date: `Nov 5th, 2017`,
     description: `Article 4`,
+    index: 3,
   },
 ];
 
-articleData.forEach(item => articles.appendChild(createArticle(item.header, item.date, item.description)));
+articleData.forEach(item => {
+  articles.appendChild(createArticle(item.header, item.date, item.description));
+});
 
 
 function createArticle(header, date, description) {
@@ -55,6 +61,13 @@ function createArticle(header, date, description) {
   //Events
   articleButton.addEventListener('click', () => {
     articleContent.classList.toggle('article-open');
+  })
+
+  articleContent.addEventListener('mouseover', () => {
+    TweenMax.to('.article', 0.15, {
+      x: 5,
+      y: 3
+    })
   })
 
   return articleContent;
