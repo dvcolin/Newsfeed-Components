@@ -1,10 +1,44 @@
+const menu = document.querySelector(".menu");
 
-const toggleMenu = () => {
-  // Toggle the "menu--open" class on your menu refence. 
+menu.appendChild(createMenu());
+
+function createMenu() {
+  //Elements
+  const menuData = [
+    "Students",
+    "Faculty",
+    `What's New`,
+    "Tech Trends",
+    "Music",
+    "Log Out"
+  ];
+
+  const menuList = document.createElement("ul");
+
+  menuData.forEach(item => {
+    let menuItem = document.createElement("li");
+    menuList.appendChild(menuItem);
+
+    menuItem.textContent = item;
+  });
+
+  //Events
+  document.querySelector(".menu-button").addEventListener("click", () => {
+    menu.classList.toggle("menu--open");
+  });
+
+  return menuList;
 }
 
-// Start Here: Create a reference to the ".menu" class
-const menu;
-// create a reference to the ".menu-button" class
-const menuButton;
-// Using your menuButton reference, add a click handler that calls toggleMenu
+{
+  /* <div class="menu">
+      <ul>
+        <li>Students</li>
+        <li>Faculty</li>
+        <li>What's New</li>
+        <li>Tech Trends</li>
+        <li>Music</li>
+        <li>Log Out</li>
+      </ul>
+    </div> */
+}
